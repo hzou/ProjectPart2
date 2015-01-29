@@ -3,7 +3,6 @@ package jz.expensetracker;
 public class Expense {
 	private int amount;
 	private String description;
-	private int category;
 	
 	public int getAmount() {
 		return amount;

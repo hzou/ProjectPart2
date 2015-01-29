@@ -17,7 +17,11 @@ import com.google.gson.reflect.TypeToken;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
 
@@ -30,6 +34,14 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		claims = loadFromFile();
 		
+		// http://developer.android.com/reference/android/widget/Button.html    2015.1.29
+		final Button button = (Button) findViewById(R.id.addClaimButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                addNewClaim();
+            }
+        });
+
 	}
 
 	
@@ -78,5 +90,8 @@ public class MainActivity extends Activity {
 		}
 	}
 	
-
+	private void addNewClaim(){
+		Intent intent = new Intent(this, AddClaimActivity.class);
+		startActivity(intent);
+	}
 }
