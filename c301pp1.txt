@@ -4,3 +4,4 @@ Team Members:
     Patrick Kuczera
     Han Luo
     Brandon Cheung
+    Zachary Budinski
