@@ -1,7 +1,7 @@
 1. Matthew
 2. Patrick
 3. Brandon
-4. John
+4. John --done: https://github.com/CMPUT301W15T14/ProjectPart2/blob/master/TeamProjectTest/src/UserStory4Test.java
 5. Han
 6. Han
 7. Brandon
