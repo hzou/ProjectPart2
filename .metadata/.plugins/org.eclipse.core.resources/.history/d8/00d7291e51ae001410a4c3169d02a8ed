@@ -1,6 +1,5 @@
 /* TODO:
  * - IMPORTANT: EXTENT OF CONTROL BASED ON STATUS (implement in Activity instead of controller?)
- * - Add/remove claim
  * - Detecting if any fields are null and giving warning
  * - Sorting claims based on startDate
  * - Sorting expenses based on date

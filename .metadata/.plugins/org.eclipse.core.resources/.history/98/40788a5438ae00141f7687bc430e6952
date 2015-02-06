@@ -1,0 +1,46 @@
+package team14.teamproject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class ClaimantController {
+	private static ArrayList<ClaimModel> claims;
+	private static String name;
+	private static FileHandler filehandler;
+	
+	public ClaimantController(String name){
+		this.name = name;
+		// get filename based on user's name, sync with server (unless offline), load claims from file.
+		claims = filehandler.loadFromFile(new ClaimModel());
+	}
+	
+	/* (4) methods for manipulating destination/reason:
+	 addDestination, setReason, removeDestination, changeDestination */
+	public void addDestination(int claim, String destination){
+		HashMap<String, String> destinations = claims.get(claim).getDestinations();
+		destinations.put(destination, null);
+		claims.get(claim).setDestinations(destinations);
+	}
+	
+	// Handles both adding and editing reason
+	public void setReason(int claim, String destination, String reason){
+		HashMap<String, String> destinations = claims.get(claim).getDestinations();
+		destinations.put(destination, reason);
+		claims.get(claim).setDestinations(destinations);
+	}
+	
+	public void removeDestination(int claim, String destination){
+		HashMap<String, String> destinations = claims.get(claim).getDestinations();
+		destinations.remove(destination);
+		claims.get(claim).setDestinations(destinations);
+	}
+	
+	public void changeDestination(int claim, String destinationBefore, String destinationAfter){
+		HashMap<String, String> destinations = claims.get(claim).getDestinations();
+		String reason = destinations.remove(destinationBefore);
+		destinations.put(destinationAfter, reason);
+		claims.get(claim).setDestinations(destinations);
+	}
+	
+	
+}

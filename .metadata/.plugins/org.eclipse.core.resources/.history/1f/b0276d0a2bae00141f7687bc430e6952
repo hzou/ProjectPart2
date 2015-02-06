@@ -1,0 +1,15 @@
+package team14.teamproject;
+
+import java.util.ArrayList;
+import team14.teamproject.FileHandler;
+
+public class ClaimantController {
+	private static ArrayList<ClaimModel> claims;
+	private static String name;
+	
+	public ClaimantController(String name){
+		this.name = name;
+		// TODO: get filename based on user's name, sync with server (unless offline), load claims from file.
+		claims = FileHander.loadFromFile(new ClaimModel());
+	}
+}

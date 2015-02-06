@@ -1,0 +1,11 @@
+import android.test.ActivityInstrumentationTestCase2;
+
+
+public class US4_1_1Test extends
+		ActivityInstrumentationTestCase2<AddClaimActivity> {
+
+	protected void setUp() throws Exception {
+		super.setUp();
+	}
+
+}

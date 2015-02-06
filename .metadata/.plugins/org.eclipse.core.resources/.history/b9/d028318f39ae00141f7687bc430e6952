@@ -1,0 +1,14 @@
+package team14.teamproject;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+
+public class DataHandler extends Activity {
+	
+	//TODO
+	public <T> ArrayList<T> loadFromFile(T object){
+		ArrayList<T> claims = new ArrayList<T>();
+		return claims;
+	}
+}

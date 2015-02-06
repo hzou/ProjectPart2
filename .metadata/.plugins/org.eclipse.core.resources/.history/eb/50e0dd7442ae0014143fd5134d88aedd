@@ -1,0 +1,19 @@
+import team14.teamproject.ClaimModel;
+import team14.teamproject.LoginActivity;
+import android.test.ActivityInstrumentationTestCase2;
+
+
+public class Story1Test extends ActivityInstrumentationTestCase2<T> {
+	public Story1Test(){
+		super(LoginActivity.class);
+	}
+	
+	protected void setUp() throws Exception {
+		super.setUp();
+		ClaimModel claim = new ClaimModel(); 
+	}
+	
+	public void testExample(){
+		// assertTrue/Equals
+	}
+}

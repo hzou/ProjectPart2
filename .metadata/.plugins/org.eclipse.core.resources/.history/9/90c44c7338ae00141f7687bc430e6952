@@ -1,14 +1,3 @@
-/* TODO:
- * - IMPORTANT: EXTENT OF CONTROL BASED ON STATUS (implement in Activity instead of controller?)
- * - Add/remove claim
- * - Detecting if any fields are null and giving warning
- * - Sorting claims based on startDate
- * - Sorting expenses based on date
- * - Calculating and displaying total currency amounts
- * - Expense methods (category, currency, amount, description)
- * - Attaching a photographed receipt with 65536 byte limit
- */
-
 package team14.teamproject;
 
 import java.text.DateFormat;
@@ -23,18 +12,25 @@ import java.util.HashMap;
  */
 public class ClaimantController {
 	private static ArrayList<ClaimModel> claims;
-	private static String claimantName;
+	private static String username;
 	private static DataHandler datahandler;
 	private static int claim;
 	private static int expense;
 	
 	public ClaimantController(String name){
-		claimantName = name;
-		datahandler = new DataHandler();
+		username = name;
 		// get filename based on user's name, sync with server (unless offline), load claims from file.
 		claims = datahandler.loadFromFile(new ClaimModel());
 	}
 	
+	/* TODO:
+	 * - Detecting if any fields are null and giving warning
+	 * - Sorting claims based on startDate
+	 * - Sorting expenses based on date
+	 * - Calculating and displaying total currency amounts
+	 * - Expense details (category, currency, amount, description)
+	 * - Attaching a photographed receipt with 
+	 */
 	
 	/* Sets the single claim/expense that is focused, for editing.
 	 * This value is based on position in the ListView, which is based on its startDate.
@@ -152,4 +148,6 @@ public class ClaimantController {
 		String date = DateFormat.getDateInstance(DateFormat.LONG).format(gc.getTime());
 		return date;
 	}
+	
+	//TODO: rest
 }

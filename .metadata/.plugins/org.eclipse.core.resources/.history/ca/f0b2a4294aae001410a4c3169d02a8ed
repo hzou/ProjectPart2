@@ -1,0 +1,7 @@
+import android.test.ActivityInstrumentationTestCase2;
+
+
+public class US01_01_01Test extends
+		ActivityInstrumentationTestCase2<MakeClaimActivity> {
+
+}

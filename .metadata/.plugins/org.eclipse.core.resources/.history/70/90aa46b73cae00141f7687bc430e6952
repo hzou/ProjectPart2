@@ -1,0 +1,12 @@
+import team14.teamproject.ClaimModel;
+import android.test.ActivityInstrumentationTestCase2;
+
+
+public class ClaimModelTest extends
+		ActivityInstrumentationTestCase2<ClaimModel> {
+
+	protected void setUp() throws Exception {
+		super.setUp();
+	}
+
+}

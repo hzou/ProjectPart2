@@ -1,0 +1,14 @@
+import android.test.ActivityInstrumentationTestCase2;
+
+
+public class ClaimControllerTest extends ActivityInstrumentationTestCase2<T> {
+
+	public ClaimControllerTest(String name) {
+		super(name);
+	}
+
+	protected void setUp() throws Exception {
+		super.setUp();
+	}
+
+}

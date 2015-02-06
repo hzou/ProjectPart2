@@ -1,0 +1,11 @@
+package team14.teamproject;
+
+import java.util.Map;
+
+public class SimpleArrayMap implements Map<K, V> {
+
+	public SimpleArrayMap() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

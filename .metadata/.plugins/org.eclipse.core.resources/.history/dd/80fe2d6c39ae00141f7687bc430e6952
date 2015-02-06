@@ -1,0 +1,13 @@
+/* TODO: categories, currencies
+ * 
+ */
+
+package team14.teamproject;
+
+import java.util.GregorianCalendar;
+
+public class ExpenseModel {
+	private int amount;
+	private String description;
+	private GregorianCalendar date;
+}
